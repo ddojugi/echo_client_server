@@ -20,7 +20,7 @@ void usage() {
 }
 
 void relay(int childfd, int flag) {
-    while (true) {
+    while(true){
         const static int BUFSIZE = 1024;
         char buf[BUFSIZE];
         Mutex.lock();
