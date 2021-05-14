@@ -30,7 +30,7 @@ void relay(int childfd, int flag) {
 		perror("recv failed");
         	client.erase(childfd);
 		break;
-	}
+	};
         
 	Mutex.unlock();
         printf("Recv from %d : ", childfd);
@@ -111,7 +111,7 @@ int main(int argc, char *argv[]) {
 		client.insert(childfd);
 		Mutex.unlock();
 		threadvec.push_back(thread(relay, childfd, flag));
-	}
+	};
 
 	close(sockfd);
 }
